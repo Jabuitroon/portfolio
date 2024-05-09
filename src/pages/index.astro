@@ -1,13 +1,66 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import About from "./about.astro";
+import Card from "../components/Card.astro";
+
+const pageTitle = "Página de inicio";
+
+// const ref = document.querySelector('#sectionbg2')
+
+// export function useObserver({ myref }) { //Elparámetro que permite que un componente que esté empleando este hook pueda establecer elementos a observar
+
+// //Creamos un estado que va almacenar los elementos que vamos a observar
+// const [ myElementIsVisible, setMyElementIsVisible ] = useState(false)
+
+// useEffect(()=>{
+//     const observerOptions = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: 0.50
+//     }
+//     //console.log('Quiero el valor actual de esa referencia', myref.current)
+//     const observer = new IntersectionObserver((entries)=>{
+//         const entry = entries[0] // console.log('entry', entry)
+//         setMyElementIsVisible(entry.isIntersecting) // console.log('El estado indefinido', myElementIsVisible)
+//     }, observerOptions)
+//     observer.observe(myref.current)
+// }, [])
+
+// return { myElementIsVisible }
+// }
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-	</main>
+<Layout title={pageTitle}>
+
+    <header id="header-nav" class='flex w-full fixed top-0 py-1 px-3 justify-between z-40'>
+      <nav id="nav-central">
+        <ul
+          id="btn-nav"
+          class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:font-right text-inherit"
+        >
+          <li><a href="#">Andrés Buitrón</a></li>
+        </ul>
+      </nav>
+      <nav id="nav-lateral" class="flex flex-grow basis-0 justify-end">
+        <ul
+          id="btn-nav"
+          class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li]:h-9"
+        >
+          <li><a href="#">Sobre Mi</a></li>
+          <li><a href="#">Proyectos</a></li>
+        </ul>
+      </nav>
+    </header>
+  <main>
+    <About />
+    <section id="sectionbg2" class="relative w-full h-[720px] bg-slate-500" >
+      <ul>
+        <li><a href="/posts/post-1">Mi post</a></li>
+        <li><a href="/posts/post-2">Mi post</a></li>
+        <li><a href="/posts/post-3">Mi post</a></li>
+      </ul>
+    </section>
+  </main>
 </Layout>
 
-<style>
-
-</style>
+<style></style>
