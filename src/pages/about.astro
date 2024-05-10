@@ -8,8 +8,6 @@ const identity = {
   hobbies: ["Desarrollo de Software", "Baile", "Gamming"],
 };
 
-const skills = ["JavaScript", "MongDB", "Express", "React", "Node.JS"];
-
 // Cuando quiera convertir en div
 const Div = "div";
 const skillColor = "#800F2F";
@@ -18,19 +16,12 @@ const skillColor = "#800F2F";
 <section
   class="h-screen relative flex w-full max-w-5xl text-xl text-left text-pretty px-20 mx-auto"
 >
-  <article class="flex flex-col justify-center" >
-    <h1 class="text-5xl font-bold my-7 ">Soy {identity.firstName}</h1>
+  <article class="flex flex-col justify-center">
+    <h1 class="text-5xl font-bold my-7">Soy {identity.firstName}</h1>
     <p class="instructions indent-6 text-clip overflow-hidden">
       Un entusiasta por la tecnología y el desarrollo web con la mejor
       disposición para realizar labores.
     </p>
-    <Div
-      >{
-        identity.hobbies.length >= 2 && (
-          <p>{skills[0]} es mi lenguaje de programación preferido</p>
-        )
-      }</Div
-    >
   </article>
   <figure class="profile_pic w-full max-w-72 flex flex-col justify-center">
     <img
@@ -39,15 +30,6 @@ const skillColor = "#800F2F";
       alt="Mi foto de presentación a mi portafolio"
     />
   </figure>
-  <!-- <p>Mis tecnologías favoritas son:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  <ul>
-    <li><a href="/posts/post-1">Mi post</a></li>
-    <li><a href="/posts/post-2">Mi post</a></li>
-    <li><a href="/posts/post-3">Mi post</a></li>
-  </ul> -->
 </section>
 
 <style define:vars={{ skillColor }}>
@@ -59,7 +41,7 @@ const skillColor = "#800F2F";
     color: var(--skillColor);
     font-weight: bold;
   }
-  p{
-    color: #C9184A
+  p {
+    color: #c9184a;
   }
 </style>

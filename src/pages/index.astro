@@ -1,7 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Navigation.astro";
+import Social from "../components/Social.astro";
 import About from "./about.astro";
-import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "Página de inicio";
 
@@ -31,29 +33,23 @@ const pageTitle = "Página de inicio";
 ---
 
 <Layout title={pageTitle}>
-
-    <header id="header-nav" class='flex w-full fixed top-0 py-1 px-3 justify-between z-40'>
-      <nav id="nav-central">
-        <ul
-          id="btn-nav"
-          class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:font-right text-inherit"
-        >
-          <li><a href="#">Andrés Buitrón</a></li>
-        </ul>
-      </nav>
-      <nav id="nav-lateral" class="flex flex-grow basis-0 justify-end">
-        <ul
-          id="btn-nav"
-          class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li]:h-9"
-        >
-          <li><a href="#">Sobre Mi</a></li>
-          <li><a href="#">Proyectos</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header
+    id="header-nav"
+    class="flex w-full fixed top-0 py-1 px-3 justify-between z-40"
+  >
+    <Nav />
+  </header>
   <main>
+    <div
+      class="follow-me fixed z-50 flex flex-col justify-center h-full"
+    >
+      <ul>
+        <Social platform="github" userName="jabuitroon" />
+        <Social platform="linkedin" userName="/in/jabuitroon" />
+      </ul>
+    </div>
     <About />
-    <section id="sectionbg2" class="relative w-full h-[720px] bg-slate-500" >
+    <section id="sectionbg2" class="relative w-full h-screen">
       <ul>
         <li><a href="/posts/post-1">Mi post</a></li>
         <li><a href="/posts/post-2">Mi post</a></li>
@@ -61,6 +57,7 @@ const pageTitle = "Página de inicio";
       </ul>
     </section>
   </main>
+  <Footer />
 </Layout>
 
 <style></style>

@@ -25,13 +25,24 @@ const { title } = Astro.props;
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
-    --bg-white: #FFF0F3;
+    /* Color para el brillito #1c2541 */
+    /* Color para el bg dark #0b132b*/
+    --bg-white: #fff0f3;
+    --ct-red: #c9184a;
     --accent-gradient: linear-gradient(
       45deg,
       rgb(var(--accent)),
       rgb(var(--accent-light)) 30%,
       white 60%
     );
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-left: 1px solid #cd0a0a;
+    background-color: #ffc9c9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #cd0a0a;
   }
   html {
     font-family: system-ui, sans-serif;
@@ -49,10 +60,8 @@ const { title } = Astro.props;
       Courier New,
       monospace;
   }
-  /* Agregando un blur a partir de un scroll */
   #header-nav {
     animation: blur linear both;
-    /* que surjan los efectos al scrollear */
     animation-timeline: scroll();
     animation-range: 0 500px;
   }
@@ -62,8 +71,16 @@ const { title } = Astro.props;
       box-shadow:
         0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
         0px 5px 1px rgba(255, 255, 255, 0.102);
-      background: #C9184A;
+      background: var(--ct-red);
       backdrop-filter: blur(10px);
+    }
+  }
+
+  .item {
+    background-color: #800f2f;
+    color: var(--bg-white);
+    &:hover {
+      color: var(--ct-red);
     }
   }
 </style>
