@@ -1,0 +1,30 @@
+---
+import Hamburguer from "../components/Hamburguer.astro";
+
+import Nav from "../components/Navigation.astro";
+---
+
+<div
+  id="globalheader"
+  class="flex w-full fixed top-0 py-1 px-3 justify-between z-50"
+>
+  <Nav />
+</div>
+
+<style>
+  #globalheader {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  @keyframes blur {
+    to {
+      box-shadow:
+        0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
+        0px 5px 1px rgba(255, 255, 255, 0.102);
+      background: var(--ct-red);
+      backdrop-filter: blur(10px);
+    }
+  }
+</style>

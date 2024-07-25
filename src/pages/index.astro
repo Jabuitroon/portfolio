@@ -1,10 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Navigation.astro";
-import Social from "../components/Social.astro";
-import About from "./about.astro";
-import Footer from "../components/Footer.astro";
-
+import GlobalHeader from "../components/GlobalHeader.astro";
+import About from "../pages/about.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TechFav from "./techFav.astro";
 const pageTitle = "Página de inicio";
 
 // const ref = document.querySelector('#sectionbg2')
@@ -33,21 +32,11 @@ const pageTitle = "Página de inicio";
 ---
 
 <Layout title={pageTitle}>
-  <header
-    id="header-nav"
-    class="flex w-full fixed top-0 py-1 px-3 justify-between z-40"
-  >
-    <Nav />
+  <header>
+    <GlobalHeader />
   </header>
   <main>
-    <div
-      class="follow-me fixed z-50 flex flex-col justify-center h-full"
-    >
-      <ul>
-        <Social platform="github" userName="jabuitroon" />
-        <Social platform="linkedin" userName="/in/jabuitroon" />
-      </ul>
-    </div>
+    <BaseLayout />
     <About />
     <section id="sectionbg2" class="relative w-full h-screen">
       <ul>
@@ -57,7 +46,10 @@ const pageTitle = "Página de inicio";
       </ul>
     </section>
   </main>
-  <Footer />
+  <footer>
+    <TechFav />
+  </footer>
+  <script>
+    import "../scripts/menu.js";
+  </script>
 </Layout>
-
-<style></style>

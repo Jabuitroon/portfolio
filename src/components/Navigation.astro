@@ -1,17 +1,23 @@
-<nav id="nav-central">
+---
+import ThemeIcon from "./ThemeIcon.astro";
+---
+<div class="nav-lateral" >
+<ThemeIcon />
+</div>
+<div id="nav-central">
   <ul
     id="btn-nav"
     class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:font-right text-inherit"
   >
     <li><a href="#">Andrés Buitrón</a></li>
   </ul>
-</nav>
-<nav id="nav-lateral" class="flex flex-grow basis-0 justify-end">
+</div>
+<div id="nav-lateral nav-links" class="flex flex-grow basis-0 justify-end">
   <ul
     id="btn-nav"
     class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li]:h-9"
   >
-    <li><a href="#">Sobre Mi</a></li>
-    <li><a href="#">Proyectos</a></li>
+    <li><a href="/">Sobre Mi</a></li>
+    <li><a href="/blog">Proyectos</a></li>
   </ul>
-</nav>
+</div>
