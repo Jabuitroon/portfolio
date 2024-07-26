@@ -1,6 +1,12 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@cv":[ "src/cv.json" ],
+      "@icon":[ "src/icons/*" ],
+      "@/*":[ "src/*" ]
+    },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }

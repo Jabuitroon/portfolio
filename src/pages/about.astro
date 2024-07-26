@@ -1,44 +1,49 @@
 ---
-const pageTitle = "Sobre Mí";
+import { basics } from "../cv.json" 
+const { name, summary } = basics
 
-const identity = {
-  firstName: "Andrés Buitrón",
-  country: "Colómbia",
-  occupation: "Web developer",
-  hobbies: ["Desarrollo de Software", "Baile", "Gamming"],
-};
+// Un objeto que puedo usar sus keys para pintarlas en el lado de HTML del componente
+// const identity = {
+//   firstName: "Andrés Buitrón",
+//   country: "Colómbia",
+//   occupation: "Web developer",
+//   hobbies: ["Desarrollo de Software", "Baile", "Gamming"],
+// }
+// <h1 class="text-5xl font-bold my-7">Soy {identity.firstName}</h1>
 
 // Cuando quiera convertir en div
-const Div = "div";
+// const Div = "div";
 const skillColor = "#800F2F";
 ---
 
 <section
-  class="h-screen relative flex w-full max-w-5xl text-xl text-left text-pretty px-20 mx-auto"
+  class="relative flex flex-col w-full max-w-5xl text-xl text-left text-pretty mx-auto"
 >
-  <article class="flex flex-col justify-center">
-    <h1 class="text-5xl font-bold my-7">Soy {identity.firstName}</h1>
-    <p class="instructions indent-6 text-clip overflow-hidden">
-      Un entusiasta por la tecnología y el desarrollo web con la mejor
-      disposición para realizar labores.
-    </p>
-  </article>
-  <figure class="profile_pic w-full max-w-72 flex flex-col justify-center">
-    <img
-      class="w-full"
-      src="../../public/profile.jpg"
-      alt="Mi foto de presentación a mi portafolio"
-    />
-  </figure>
+  <div class="flex h-screen w-full max-w-5xl p-4">
+    <article class="flex flex-col justify-center">
+      <h1 class="text-5xl font-bold my-7">Soy {name}</h1>
+      <p class="instructions indent-6 text-clip overflow-hidden">
+        {summary}
+      </p>
+    </article>
+    <figure class="profile_pic w-full max-w-72 flex flex-col justify-center">
+      <img
+        class="w-full rounded-full"
+        src="../../public/profile.jpg"
+        alt="Mi foto de presentación a mi portafolio"
+      />
+    </figure>
+  </div>
 </section>
+
 
 <style define:vars={{ skillColor }}>
   h1 {
     color: var(--skillColor);
     font-size: 4rem;
   }
-  .dark h1{
-    color: #FFF0F3;
+  .dark h1 {
+    color: #fff0f3;
   }
   .skill {
     color: var(--skillColor);
