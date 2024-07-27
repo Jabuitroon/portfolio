@@ -4,6 +4,7 @@ const { name, summary } = basics;
 const [edu, pro] = awards;
 
 const skillColor = "#800F2F";
+const h3Color = "#c9184a";
 ---
 
 <section class="relative flex flex-col w-full max-w-3xl mx-auto">
@@ -22,44 +23,49 @@ const skillColor = "#800F2F";
       />
     </figure>
   </div>
-  <div class="relative w-full max-w-3xl mx-auto p-4">
-    <h2 class="text-2xl">{edu.title}</h2>
-    <ul class="flex flex-col gap-8">
+  <div class="relative w-full max-w-3xl mx-auto px-4">
+    <h2 class="title text-2xl font-bold">{edu.title}</h2>
+    <ul class="flex flex-col gap-8 px-6 text-lg">
       {
         education.map(
           ({ institution, studyType, area, startDate, endDate }) => {
-            const endYear = endDate !== null ? `${endDate}` : "Actualmente"
+            const endYear = endDate !== null ? `${endDate}` : "Actualmente";
             return (
               <li>
                 <article>
-                  <header>
-                    <h3>{area}</h3>
-                    <h2>{institution}</h2>
+                  <header class="h3Color">
+                    <h2>{area}</h2>
                   </header>
                   <footer>
+                    <h3>{institution}</h3>
                     <p>{studyType}</p>
-                    <p>{`${startDate} - ${endYear}`}</p>
+                    <p class="text-xs">{`${startDate} - ${endYear}`}</p>
                   </footer>
                 </article>
               </li>
-            )
+            );
           }
         )
       }
     </ul>
-    <h2 class="text-2xl">{pro.title}</h2>
+    <h2 class="title text-2xl font-bold mt-8">{pro.title}</h2>
   </div>
 </section>
 
-<style define:vars={{ skillColor }}>
+<style define:vars={{ skillColor, h3Color }}>
   h1 {
     color: var(--skillColor);
   }
   .dark h1 {
     color: #fff0f3;
   }
-  .skill {
+  .h3Color {
+    color: var(--h3Color);
+  }
+  .title {
     color: var(--skillColor);
-    font-weight: bold;
+  }
+  li {
+    list-style-type: "⌨ ";
   }
 </style>

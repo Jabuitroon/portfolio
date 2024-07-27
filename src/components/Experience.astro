@@ -5,7 +5,7 @@ const [ bingo, poke ] = projects
 
 ---
 <section
-  class="relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-5 mx-auto p-4"
+  class="relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-2 mx-auto px-4 py-2"
 >
   <BentoItem
     class="col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out"
@@ -38,5 +38,37 @@ const [ bingo, poke ] = projects
     <p slot="content" class="max-w-xl">
       {bingo.description}
     </p>
+  </BentoItem>
+  <BentoItem
+    class="col-span-10 md:col-span-6"
+    title={bingo.name}
+    description={bingo.description}
+    tech={poke.highlights}
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blue-950 bg-blend-luminosity -z-10"
+      style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIaRydV7sQncHzTbY8CoLIr4HxEDybaPLQpA&s')"
+    >
+    </div>
+    <p slot="content" class="max-w-xl">
+      {bingo.description}
+    </p>
+  </BentoItem>
+
+  <BentoItem
+    class="col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out"
+    title={poke.name}
+    description={poke.description}
+    tech={poke.highlights}
+  >
+    <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
+    transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10"
+      style="background-image: url('https://tecnonucleous.com/content/images/2018/08/windows-10-to-Win-xp-1024x576.jpg')"
+    >
+    </div>
   </BentoItem>
 </section>

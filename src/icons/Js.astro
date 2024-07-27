@@ -1,4 +1,7 @@
-<svg class="hover:text-[#f7df1e]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630" height="90px" width="90px">
+---
+const { height, width } = Astro.props;
+---
+<svg class="hover:text-[#f7df1e]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630" height={height} width={width}>
   <rect width="630" height="630" fill="currentColor"></rect>
   <path
     fill="#800F2F"

@@ -1,30 +1,20 @@
 ---
-import Hamburguer from "../components/Hamburguer.astro";
-
-import Nav from "../components/Navigation.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<div
-  id="globalheader"
-  class="flex w-full fixed top-0 py-1 px-3 justify-between z-50"
->
-  <Nav />
+<div class="flex w-full md:max-w-3xl justify-between mx-auto px-4 z-50">
+  <div class="nav-lateral">
+    <ThemeIcon />
+  </div>
+  <div id="nav-central">
+    <ul id="btn-nav" class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:font-right text-inherit">
+      <li><a href="#">Andrés Buitrón</a></li>
+    </ul>
+  </div>
+  <div id="nav-lateral nav-links" class="flex flex-grow basis-0 justify-end">
+    <ul id="btn-nav" class="flex text-sm gap-2 [&>li>a]:inline-block [&>li>a]:py-2 [&>li]:h-9">
+      <li><a href="/">Sobre Mi</a></li>
+      <li><a href="/blog">Proyectos</a></li>
+    </ul>
+  </div>
 </div>
-
-<style>
-  #globalheader {
-    animation: blur linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  }
-
-  @keyframes blur {
-    to {
-      box-shadow:
-        0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
-        0px 5px 1px rgba(255, 255, 255, 0.102);
-      background: var(--ct-red);
-      backdrop-filter: blur(10px);
-    }
-  }
-</style>
