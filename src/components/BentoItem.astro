@@ -1,27 +1,41 @@
 ---
 interface Props {
-  class?: string;
   title: string;
-  subtitle?: string;
+  tech: any;
+  description?: string;
+  class?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, description, tech } = Astro.props;
 ---
 
 <article
-  class={`${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 group overflow-hidden`}
+  class={`${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 group overflow-hidden text-teal-500`}
 >
   <slot name="image" />
   <div
-    class="absolute z-10 flex flex-col justify-end group-hover:scale-y-150 group-hover:-translate-y-12 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
+    class="relative select-none flex flex-col gap-1 p-6 text-lg z-20 h-full justify-end transition-all group-hover:-translate-y-12"
   >
-  <header>Una tecnologia</header>
+    <h2 class="text-2xl semi-bold text-balance text-white mb-4">{title}</h2>
+    {
+      description && (
+        <h3 class="text-lg semi-bold text-[#FFF0F3]">{description}</h3>
+      )
+    }
   </div>
   <div
-    class="relative select-none flex flex-col gap-1 p-6 text-lg z-20 h-full justify-end transition-all hover:-translate-y-12"
+    class="absolute flex group-hover:scale-y-150 group-hover:-translate-y-12 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
   >
-    <h2 class="text-3xl semi-bold text-balance text-white mb-4">{title}</h2>
-    {subtitle && <h3 class="text-xl semi-bold text-sky-200/80">{subtitle}</h3>}
-    <slot name="content" />
+  </div>
+  <div class="w-full flex justify-center gap-2">
+    {
+      tech.map((sk) => {
+        return (
+          <span class="group-hover:-translate-y-12 duration-300 rounded-lg bg-[#C9184A] text-white/80 text-lg px-3 py-1">
+            {sk}
+          </span>
+        );
+      })
+    }
   </div>
 </article>

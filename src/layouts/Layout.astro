@@ -15,6 +15,11 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("hide-overflow");
+      });
+    </script>
   </head>
   <body>
     <slot />
@@ -41,7 +46,7 @@ const { title } = Astro.props;
     background-color: #0b132b;
     color: var(--ct-red);
   }
-  
+
   .dark #globalheader a {
     color: var(--bg-white);
   }
@@ -75,6 +80,24 @@ const { title } = Astro.props;
     color: var(--bg-white);
     &:hover {
       color: var(--ct-red);
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    position: relative;
+    &:before {
+      content: "";
+      transition: transform 0.5s;
+      transition-delay: 0.2s;
+    }
+    &.hide-overflow {
+      &:before {
+        transform: translateY(-100%);
+      }
     }
   }
 </style>

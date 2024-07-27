@@ -51,14 +51,18 @@
   ],
   "education": [
     {
+      "institution": "Servicio Nacional de Aprendizaje",
+      "studyType": "Tecnólogo",
+      "area": "Análisis y Desarrollo en sistemas de información",
+      "startDate": "2019",
+      "endDate": "2021"
+    },
+    {
       "institution": "Fundación Universitaria de Popayán",
-      "url": "https://institution.com/",
-      "area": "System Enginering",
-      "studyType": "U",
-      "startDate": "2023-08-05",
-      "endDate": "Coursing",
-      "score": "full",
-      "courses": ["DB1101 - Basic SQL"]
+      "studyType": "Pregrado",
+      "area": "Ingeniería de sistemas",
+      "startDate": "2023",
+      "endDate": null
     }
   ],
   "awards": [
@@ -115,18 +119,14 @@
   "projects": [
     {
       "name": "Bingo Game",
-      "startDate": "2023-06-01",
-      "endDate": null,
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
+      "description": "Versión tabla única",
+      "highlights": ["React", "TailwindCss"],
       "url": "https://project.com/"
     },
     {
       "name": "PokeApi",
-      "startDate": "2024-06-01",
-      "endDate": null,
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
+      "description": "Una réplica de la pokedex de los juegos",
+      "highlights": ["React", "TailwindCss"],
       "url": "https://project.com/"
     }
   ]

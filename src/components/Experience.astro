@@ -1,20 +1,17 @@
 ---
-import BentoItem from "./BentoItem.astro"
-import { projects, awards } from "../cv.json"
-const [edu, pro] = awards
+import BentoItem from "@components/BentoItem.astro"
+import { projects } from "@cv"
 const [ bingo, poke ] = projects
 
 ---
-
-<div class="education relative w-full max-w-5xl mx-auto p-4">
-  <h2 class="text-4xl">{pro.title}</h2>
-</div>
 <section
-  class="relative w-full max-w-5xl grid grid-cols-10 auto-rows-[25rem] gap-5 mx-auto p-4"
+  class="relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-5 mx-auto p-4"
 >
   <BentoItem
     class="col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out"
     title={poke.name}
+    description={poke.description}
+    tech={poke.highlights}
   >
     <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
     <div
@@ -24,15 +21,13 @@ const [ bingo, poke ] = projects
       style="background-image: url('https://tecnonucleous.com/content/images/2018/08/windows-10-to-Win-xp-1024x576.jpg')"
     >
     </div>
-    <p slot="content" class="max-w-xl">
-      {poke.description}
-    </p>
   </BentoItem>
 
   <BentoItem
     class="col-span-10 md:col-span-6"
     title={bingo.name}
-    subtitle="16 de febrero de 2024"
+    description={bingo.description}
+    tech={poke.highlights}
   >
     <div
       slot="image"
