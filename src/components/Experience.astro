@@ -1,74 +1,77 @@
 ---
-import BentoItem from "@components/BentoItem.astro"
-import { projects } from "@cv"
-const [ bingo, poke ] = projects
-
+import BentoItem from '@components/BentoItem.astro'
+import { projects } from '@cv'
+const [bingo, buscaM, myPlato] = projects
 ---
+
 <section
-  class="relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-2 mx-auto px-4 py-2"
+  class='relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-2 mx-auto px-4 py-2'
 >
   <BentoItem
-    class="col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out"
-    title={poke.name}
-    description={poke.description}
-    tech={poke.highlights}
+    class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
+    title={buscaM.name}
+    description={buscaM.description}
+    tech={buscaM.highlights}
+    linkDemo={buscaM.url}
   >
     <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
     <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
-    transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10"
-      style="background-image: url('https://tecnonucleous.com/content/images/2018/08/windows-10-to-Win-xp-1024x576.jpg')"
+      slot='image'
+      class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
+    transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
+      style="background-image: ur('https://www.nobbot.com/wp-content/uploads/2022/01/buscaminas.jpg')"
     >
     </div>
   </BentoItem>
 
   <BentoItem
-    class="col-span-10 md:col-span-6"
+    class='col-span-10 md:col-span-6'
     title={bingo.name}
     description={bingo.description}
-    tech={poke.highlights}
+    tech={bingo.highlights}
+    linkDemo={bingo.url}
   >
     <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blue-950 bg-blend-luminosity -z-10"
-      style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIaRydV7sQncHzTbY8CoLIr4HxEDybaPLQpA&s')"
+      slot='image'
+      class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
+      style=`background-image: url(${bingo.imgPrev}.png)`
     >
     </div>
-    <p slot="content" class="max-w-xl">
+    <p slot='content' class='max-w-xl'>
       {bingo.description}
     </p>
   </BentoItem>
   <BentoItem
-    class="col-span-10 md:col-span-6"
-    title={bingo.name}
-    description={bingo.description}
-    tech={poke.highlights}
+    class='col-span-10 md:col-span-6'
+    title={myPlato.name}
+    description={myPlato.description}
+    tech={myPlato.highlights}
+    linkDemo={myPlato.url}
   >
     <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blue-950 bg-blend-luminosity -z-10"
-      style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIaRydV7sQncHzTbY8CoLIr4HxEDybaPLQpA&s')"
+      slot='image'
+      class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
+      style=`background-image: url(${myPlato.imgPrev}.png)`
     >
     </div>
-    <p slot="content" class="max-w-xl">
-      {bingo.description}
+    <p slot='content' class='max-w-xl'>
+      {myPlato.description}
     </p>
   </BentoItem>
 
-  <BentoItem
-    class="col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out"
-    title={poke.name}
-    description={poke.description}
-    tech={poke.highlights}
-  >
-    <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
-    <div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
-    transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10"
+  <!-- <BentoItem
+    class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
+    title={buscaM.name}
+    description={buscaM.description}
+    tech={buscaM.highlights}
+  > -->
+  <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
+  <!-- <div
+      slot='image'
+      class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
+    transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
       style="background-image: url('https://tecnonucleous.com/content/images/2018/08/windows-10-to-Win-xp-1024x576.jpg')"
     >
     </div>
-  </BentoItem>
+  </BentoItem> -->
 </section>

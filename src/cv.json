@@ -53,14 +53,14 @@
     {
       "institution": "Servicio Nacional de Aprendizaje",
       "studyType": "Tecnólogo",
-      "area": "Análisis y Desarrollo en sistemas de información",
+      "area": "Análisis y Desarrollo en Sistemas de Información",
       "startDate": "2019",
       "endDate": "2021"
     },
     {
       "institution": "Fundación Universitaria de Popayán",
       "studyType": "Pregrado",
-      "area": "Ingeniería de sistemas",
+      "area": "Ingeniería de Sistemas",
       "startDate": "2023",
       "endDate": null
     }
@@ -121,13 +121,21 @@
       "name": "Bingo Game",
       "description": "Versión tabla única",
       "highlights": ["React", "TailwindCss"],
+      "imgPrev": "bingoGamePrev",
+      "url": "https://jabuitroon.github.io/Bingo_Game/"
+    },
+    {
+      "name": "Busca Minas",
+      "description": "El clásico busca minas de Windows",
+      "highlights": ["React", "TailwindCss"],
       "url": "https://project.com/"
     },
     {
-      "name": "PokeApi",
-      "description": "Una réplica de la pokedex de los juegos",
-      "highlights": ["React", "TailwindCss"],
-      "url": "https://project.com/"
+      "name": "Mi Plato es el mejor",
+      "description": "Web estática para promocionar un restaurante",
+      "highlights": ["HTML5", "CSS3"],
+      "imgPrev": "myP",
+      "url": "https://jabuitroon.github.io/Mi-plato_es_el_mejor/"
     }
   ]
 }

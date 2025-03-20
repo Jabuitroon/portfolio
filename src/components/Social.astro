@@ -1,17 +1,18 @@
 ---
-const { platform, userName } = Astro.props;
+const { platform, userName } = Astro.props
 ---
-  <li>
-    <a
-      class=`${platform} item`
-      target="_blank"
-      href=`https://${platform}.com/${userName}`
-      title=`Follow on ${platform}`
-    >
-      <slot />
-      <span class="sr-only">Follow on {platform}</span></a
-    >
-  </li>
+
+<li>
+  <a
+    class=`${platform} item`
+    target='_blank'
+    href=`https://${platform}.com/${userName}`
+    title=`Follow on ${platform}`
+  >
+    <slot />
+    <span class='sr-only'>Follow on {platform}</span></a
+  >
+</li>
 
 <style define:vars={{ platform }}>
   .item {
