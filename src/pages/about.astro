@@ -9,13 +9,13 @@ const h3Color = "#c9184a";
 
 <section class="relative flex flex-col w-full max-w-3xl mx-auto">
   <div class="flex h-screen w-full max-w-3xl p-4">
-    <article class="flex flex-col justify-center text-left text-pretty">
+    <article class="animate-fade-up flex flex-col justify-center text-left text-pretty">
       <h1 class="text-4xl font-bold my-5">Soy {name}</h1>
       <p class="text-lg pl-1 text-clip overflow-hidden text-[#c9184a]">
         {summary}
       </p>
     </article>
-    <figure class="profile_pic w-full max-w-72 flex flex-col justify-center">
+    <figure class="animate-fade-up profile_pic w-full max-w-72 flex flex-col justify-center">
       <img
         class="w-full rounded-full"
         src="/profile.jpg"
@@ -23,7 +23,7 @@ const h3Color = "#c9184a";
       />
     </figure>
   </div>
-  <div class="relative w-full max-w-3xl mx-auto px-4">
+  <div id="about" class="relative w-full max-w-3xl mx-auto px-4 pt-11">
     <h2 class="title text-2xl font-bold">{edu.title}</h2>
     <ul class="flex flex-col gap-8 px-6 text-lg">
       {
@@ -48,7 +48,7 @@ const h3Color = "#c9184a";
         )
       }
     </ul>
-    <h2 class="title text-2xl font-bold mt-8">{pro.title}</h2>
+    <h2 id='projects' class="title text-2xl font-bold pt-11">{pro.title}</h2>
   </div>
 </section>
 

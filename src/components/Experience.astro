@@ -5,7 +5,7 @@ const [bingo, buscaM, myPlato] = projects
 ---
 
 <section
-  class='relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-2 mx-auto px-4 py-2'
+  class='animate-fade-up animate-once relative w-full max-w-3xl grid grid-cols-10 auto-rows-[15rem] gap-2 mx-auto px-4 py-2'
 >
   <BentoItem
     class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
@@ -41,6 +41,7 @@ const [bingo, buscaM, myPlato] = projects
       {bingo.description}
     </p>
   </BentoItem>
+
   <BentoItem
     class='col-span-10 md:col-span-6'
     title={myPlato.name}

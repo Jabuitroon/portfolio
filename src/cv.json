@@ -126,7 +126,7 @@
     },
     {
       "name": "Busca Minas",
-      "description": "El clásico busca minas de Windows",
+      "description": "Un clásico de Windows",
       "highlights": ["React", "TailwindCss"],
       "imgPrev": "buscaMinas",
       "url": "https://jabuitroon.github.io/Buscaminas/"
