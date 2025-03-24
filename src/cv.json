@@ -128,7 +128,8 @@
       "name": "Busca Minas",
       "description": "El clásico busca minas de Windows",
       "highlights": ["React", "TailwindCss"],
-      "url": "https://project.com/"
+      "imgPrev": "buscaMinas",
+      "url": "https://jabuitroon.github.io/Buscaminas/"
     },
     {
       "name": "Mi Plato es el mejor",
