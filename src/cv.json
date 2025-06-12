@@ -137,6 +137,13 @@
       "highlights": ["HTML5", "CSS3"],
       "imgPrev": "myP",
       "url": "https://jabuitroon.github.io/Mi-plato_es_el_mejor/"
+    },
+    {
+      "name": "E-commerce layout",
+      "description": "Una tienda virtual, carrito de compras y funcionalidades de administrador",
+      "highlights": ["React", "TypeScript", "Tailwind Css"],
+      "imgPrev": "ecommerce",
+      "url": "https://github.com/Jabuitroon/e-commerce.git"
     }
   ]
 }

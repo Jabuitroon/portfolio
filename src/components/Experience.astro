@@ -1,7 +1,7 @@
 ---
 import BentoItem from '@components/BentoItem.astro'
 import { projects } from '@cv'
-const [bingo, buscaM, myPlato] = projects
+const [bingo, buscaM, myPlato, ecomm] = projects
 ---
 
 <section
@@ -44,35 +44,36 @@ const [bingo, buscaM, myPlato] = projects
 
   <BentoItem
     class='col-span-10 md:col-span-6'
+    title={ecomm.name}
+    description={ecomm.description}
+    tech={ecomm.highlights}
+    linkDemo={ecomm.url}
+  >
+    <div
+      slot='image'
+      class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
+      style=`background-image: url(${ecomm.imgPrev}.webp)`
+    >
+    </div>
+    <p slot='content' class='max-w-xl'>
+      {ecomm.description}
+    </p>
+  </BentoItem>
+
+  <BentoItem
+    class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
     title={myPlato.name}
     description={myPlato.description}
     tech={myPlato.highlights}
     linkDemo={myPlato.url}
   >
+    <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
     <div
-      slot='image'
-      class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
-      style=`background-image: url(${myPlato.imgPrev}.webp)`
-    >
-    </div>
-    <p slot='content' class='max-w-xl'>
-      {myPlato.description}
-    </p>
-  </BentoItem>
-
-  <!-- <BentoItem
-    class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
-    title={buscaM.name}
-    description={buscaM.description}
-    tech={buscaM.highlights}
-  > -->
-  <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
-  <!-- <div
       slot='image'
       class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
     transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
-      style="background-image: url('https://tecnonucleous.com/content/images/2018/08/windows-10-to-Win-xp-1024x576.jpg')"
+      style=`background-image: url(${myPlato.imgPrev}.webp)`
     >
     </div>
-  </BentoItem> -->
+  </BentoItem>
 </section>
