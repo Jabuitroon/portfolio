@@ -4,7 +4,7 @@ const { platform, userName } = Astro.props
 
 <li>
   <a
-    class=`${platform} item`
+    class={`${platform} item`}
     target='_blank'
     href=`https://${platform}.com/${userName}`
     title=`Follow on ${platform}`
@@ -16,22 +16,15 @@ const { platform, userName } = Astro.props
 
 <style define:vars={{ platform }}>
   .item {
+    position: relative;
     display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 55px;
     height: 55px;
-    position: relative;
-    transition: width 0.25s;
-  }
-
-  .item span {
-    display: block;
-    width: 35px;
-    height: 35px;
-    background-size: 100% auto;
-    text-indent: -9999em;
+    transition: all 0.3s ease;
+    padding: 2px 10px;
   }
 
   .item:hover {
