@@ -93,9 +93,9 @@
   ],
   "skills": [
     {
-      "name": "Lenguajes y Frameworks",
+      "name": "Tecnologías",
       "level": "Favorites",
-      "keywords": ["Html5", "Css3", "JavaScript", "React", "Tailwind"]
+      "keywords": ["Html5", "Css3", "JavaScript", "TypeScript", "React", "Tailwind", "NodeJs", "MySQL", "Python"]
     }
   ],
   "languages": [

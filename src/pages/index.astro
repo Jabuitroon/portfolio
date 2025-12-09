@@ -1,20 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import GlobalHeader from "../components/GlobalHeader.astro"
-import SocialLayout from "../layouts/ItemsSocialLayout.astro"
-import About from "../pages/about.astro"
-import Experience from "../components/Experience.astro"
-import Footer from "../components/Footer.astro"
-const pageTitle = "Página de inicio"
-import '@fontsource/ubuntu'
+import Layout from '../layouts/Layout.astro'
+import GlobalHeader from '../components/GlobalHeader.astro'
+import SocialLayout from '../layouts/ItemsSocialLayout.astro'
+import About from '../pages/about.astro'
+import Experience from '../components/Experience.astro'
+import Footer from '../components/Footer.astro'
+const pageTitle = 'Página de inicio'
 ---
 
 <Layout title={pageTitle}>
-  <header id="globalheader" class="w-full fixed top-0 py-1 px-3 z-50">
+  <header id='globalheader' class='w-full fixed top-0 py-1 px-3 z-50'>
     <GlobalHeader />
   </header>
-  <main>
-    <SocialLayout />
+  <SocialLayout />
+  <main class='snap-y'>
     <About />
     <Experience />
   </main>
@@ -25,9 +24,9 @@ import '@fontsource/ubuntu'
 
 <style>
   body {
-  font-family: 'Ubuntu', sans-serif;
-}
-    #globalheader {
+    font-family: 'Ubuntu', sans-serif;
+  }
+  #globalheader {
     animation: blur linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;

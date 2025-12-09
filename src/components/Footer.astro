@@ -1,14 +1,18 @@
 ---
-import { skills } from "../cv.json";
-const [favorites] = skills;
+import { skills } from '../cv.json'
+const [favorites] = skills
 
-const array = favorites.keywords;
+const array = favorites.keywords
 
-import JavaScript from "@icons/Js.astro"
-import Html5 from "@icons/html.astro"
-import Css3 from "@icons/Css.astro"
-import React from "@icons/React.astro"
-import Tailwind from "@icons/TailwindCss.astro"
+import JavaScript from '@icons/Js.astro'
+import Html5 from '@icons/html.astro'
+import Css3 from '@icons/Css.astro'
+import React from '@icons/React.astro'
+import Tailwind from '@icons/TailwindCss.astro'
+import TypeScript from '@icons/TS.astro'
+import NodeJs from '@icons/Node.astro'
+import MySQL from '@icons/MySQL.astro'
+import Python from '@icons/Python.astro'
 
 const SOCIAL_ICONS: Record<string, any> = {
   Html5,
@@ -16,31 +20,35 @@ const SOCIAL_ICONS: Record<string, any> = {
   JavaScript,
   Tailwind,
   React,
+  TypeScript,
+  NodeJs,
+  MySQL,
+  Python
 }
 ---
 
-<footer class="bg-[#800F2F] text-white w-full">
-  <article class="mx-auto w-full max-w-3xl px-4 py-0 lg:py-2">
-    <div class=" md:mb-0 w-full text-center">
+<footer class='bg-[#800F2F] text-white w-full'>
+  <article class='mx-auto w-full max-w-3xl px-4 py-0 lg:py-2'>
+    <div class='md:mb-0 w-full text-center'>
       <h2>{favorites.name}</h2>
     </div>
-    <div class="grid grid-cols-5 gap-8 sm:gap-6 max-w-xl mx-auto my-2">
+    <div class='grid grid-cols-5 gap-8 sm:gap-6 max-w-xl mx-auto my-2'>
       {
         array.map((name) => {
-          let Icon = SOCIAL_ICONS[name];
+          let Icon = SOCIAL_ICONS[name]
 
           return (
-            <div class="w-20 mx-auto flex flex-col items-center gap-2 text-xs">
-              <Icon height={'2rem'} width={"2rem"} />
+            <div class='w-20 mx-auto flex flex-col items-center gap-2 text-xs text-white group'>
+              <Icon height={'2rem'} width={'2rem'} />
               <p>{name}</p>
             </div>
-          );
+          )
         })
       }
     </div>
-    <hr class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-[5px]" />
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+    <hr class='border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-[5px]' />
+    <div class='sm:flex sm:items-center sm:justify-between'>
+      <span class='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
         2023. Popayán - Cauca - Colómbia
       </span>
     </div>
