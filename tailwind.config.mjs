@@ -5,12 +5,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        textcolor: '#1282A2',
-        primary: '#034078',
-        secundary: '#001F54',
-        dark: '#0A1128',
+        subtitle: '#034078',
+        primary: '#0b132b',
+        secundary: '#1282A2',
+        headers: '#034078',
       },
     },
   },
   plugins: [formsPlugin],
+  darkMode: 'class',
 }

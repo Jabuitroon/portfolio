@@ -8,12 +8,13 @@ import Footer from '../components/Footer.astro'
 const pageTitle = 'Página de inicio'
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} >
   <header id='globalheader' class='w-full fixed top-0 py-1 px-3 z-50'>
     <GlobalHeader />
   </header>
   <SocialLayout />
-  <main class='snap-y'>
+  <main class='snap-y' id="main">
+    <div class="spotlight" id="spotlight"></div>
     <About />
     <Experience />
   </main>
@@ -33,6 +34,14 @@ const pageTitle = 'Página de inicio'
     animation-range: 0 500px;
   }
 
+  .spotlight {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    transition: background 300ms ease;
+  }
+
   @keyframes blur {
     to {
       box-shadow:
@@ -44,3 +53,19 @@ const pageTitle = 'Página de inicio'
     }
   }
 </style>
+
+<script>
+  const container = document.getElementById('main')
+  const spotlight = document.getElementById('spotlight')
+
+  container.addEventListener('mousemove', (e) => {
+    const x = e.clientX 
+    const y = e.clientY
+
+    spotlight.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(255, 255, 255, 0.15), transparent 40%)`
+  })
+
+  container.addEventListener('mouseleave', () => {
+    spotlight.style.background = 'transparent'
+  })
+</script>

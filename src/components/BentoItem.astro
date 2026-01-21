@@ -11,7 +11,7 @@ const { title, description, tech, linkDemo } = Astro.props
 ---
 
 <article
-  class={`${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 group overflow-hidden text-teal-500`}
+  class={`${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border hover:border-secundary border-black/10 shadow-inner shadow-white/10 group overflow-hidden`}
 >
   <slot name='image' />
   <div
@@ -32,7 +32,7 @@ const { title, description, tech, linkDemo } = Astro.props
     {
       tech.map((sk) => {
         return (
-          <span class='group-hover:-translate-y-12 duration-300 rounded-lg bg-primary text-white/80 text-sm px-3 py-1 border-2 border-textcolor'>
+          <span class='group-hover:-translate-y-12 duration-300 rounded-lg bg-headers text-white/80 text-sm px-3 py-1 border-2 border-textcolor'>
             {sk}
           </span>
         )
@@ -41,7 +41,7 @@ const { title, description, tech, linkDemo } = Astro.props
     <a
       href=`${linkDemo}`
       target='_blank'
-      class='group-hover:-translate-y-12 duration-300 rounded-lg text-white text-sm px-3 py-1 border-2 border-textcolor bg-textcolor'
+      class='group-hover:-translate-y-12 duration-300 rounded-lg text-white text-sm px-3 py-1 bg-secundary'
       >Demo</a
     >
   </div>

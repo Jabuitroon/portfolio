@@ -12,8 +12,8 @@ const h3Color = '#034078'
     <article
       class='animate-fade-up flex flex-col justify-center text-left text-pretty'
     >
-      <h1 class='text-4xl font-bold my-5'>Soy {name}</h1>
-      <p class='text-lg pl-1 text-clip overflow-hidden text-sky-900'>
+      <h1 class='text-4xl font-bold my-5 text-headers dark:text-secundary'>Soy {name}</h1>
+      <p class='text-lg pl-1 text-clip overflow-hidden text-black dark:text-white/90'>
         {summary}
       </p>
     </article>
@@ -32,7 +32,7 @@ const h3Color = '#034078'
     </figure>
   </div>
   <div id='about' class='relative w-full max-w-3xl mx-auto px-4 pt-11'>
-    <h2 class='title text-2xl font-bold'>{edu.title}</h2>
+    <h2 class='title text-2xl font-bold text-primary dark:text-secundary'>{edu.title}</h2>
     <ul class='flex flex-col gap-8 px-6 text-lg'>
       {
         education.map(
@@ -41,7 +41,7 @@ const h3Color = '#034078'
             return (
               <li>
                 <article>
-                  <header class='h3Color'>
+                  <header class="text-subtitle dark:text-secundary">
                     <h2>{area}</h2>
                   </header>
                   <footer>
@@ -56,23 +56,11 @@ const h3Color = '#034078'
         )
       }
     </ul>
-    <h2 id='projects' class='title text-2xl font-bold pt-11'>{pro.title}</h2>
+    <h2 id='projects' class='title text-primary dark:text-secundary text-2xl font-bold pt-11'>{pro.title}</h2>
   </div>
 </section>
 
 <style define:vars={{ skillColor, h3Color }}>
-  h1 {
-    color: var(--skillColor);
-  }
-  .dark h1 {
-    color: #fff0f3;
-  }
-  .h3Color {
-    color: var(--h3Color);
-  }
-  .title {
-    color: var(--skillColor);
-  }
   li {
     list-style-type: '⌨ ';
   }

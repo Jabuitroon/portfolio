@@ -141,7 +141,7 @@
     {
       "name": "E-commerce layout",
       "description": "Una tienda virtual, carrito de compras y funcionalidades de administrador",
-      "highlights": ["TypeScript", "Node Js", "React", "Tailwind Css"],
+      "highlights": ["TypeScript", "React", "Tailwind Css"],
       "imgPrev": "ecommerce",
       "url": "https://github.com/Jabuitroon/e-commerce.git"
     }
