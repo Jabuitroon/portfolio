@@ -32,7 +32,7 @@ const { title, description, tech, linkDemo } = Astro.props
     {
       tech.map((sk) => {
         return (
-          <span class='group-hover:-translate-y-12 duration-300 rounded-lg bg-[#C9184A] text-white/80 text-sm px-3 py-1 border-4 border-[#C9184A]'>
+          <span class='group-hover:-translate-y-12 duration-300 rounded-lg bg-primary text-white/80 text-sm px-3 py-1 border-2 border-textcolor'>
             {sk}
           </span>
         )
@@ -41,7 +41,7 @@ const { title, description, tech, linkDemo } = Astro.props
     <a
       href=`${linkDemo}`
       target='_blank'
-      class='group-hover:-translate-y-12 duration-300 rounded-lg text-[#C9184A] text-sm px-3 py-1 border-2 border-[#C9184A]'
+      class='group-hover:-translate-y-12 duration-300 rounded-lg text-white text-sm px-3 py-1 border-2 border-textcolor bg-textcolor'
       >Demo</a
     >
   </div>

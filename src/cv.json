@@ -93,7 +93,7 @@
   ],
   "skills": [
     {
-      "name": "Tecnologías",
+      "name": "<My Stack />",
       "level": "Favorites",
       "keywords": ["Html5", "Css3", "JavaScript", "TypeScript", "React", "Tailwind", "NodeJs", "MySQL", "Python"]
     }
@@ -141,7 +141,7 @@
     {
       "name": "E-commerce layout",
       "description": "Una tienda virtual, carrito de compras y funcionalidades de administrador",
-      "highlights": ["React", "TypeScript", "Tailwind Css"],
+      "highlights": ["TypeScript", "Node Js", "React", "Tailwind Css"],
       "imgPrev": "ecommerce",
       "url": "https://github.com/Jabuitroon/e-commerce.git"
     }
