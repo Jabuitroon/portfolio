@@ -1,7 +1,7 @@
 ---
 import BentoItem from '@components/BentoItem.astro'
 import { projects } from '@cv'
-const [bingo, buscaM, myPlato, ecomm] = projects
+const [bingo, buscaM, myPlato, ecomm, moviRent] = projects
 ---
 
 <section
@@ -9,37 +9,34 @@ const [bingo, buscaM, myPlato, ecomm] = projects
 >
   <BentoItem
     class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
-    title={bingo.name}
-    description={bingo.description}
-    tech={bingo.highlights}
-    linkDemo={bingo.url}
+    title={buscaM.name}
+    description={buscaM.description}
+    tech={buscaM.highlights}
+    linkDemo={buscaM.url}
   >
     <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
     <div
       slot='image'
       class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
     transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
-      style=`background-image: url(${bingo.imgPrev}.webp)`
+      style=`background-image: url(${buscaM.imgPrev}.webp)`
     >
     </div>
   </BentoItem>
 
   <BentoItem
     class='col-span-10 md:col-span-6'
-    title={buscaM.name}
-    description={buscaM.description}
-    tech={buscaM.highlights}
-    linkDemo={buscaM.url}
+    title={moviRent.name}
+    description={moviRent.description}
+    tech={moviRent.highlights}
+    linkDemo={moviRent.url}
   >
     <div
       slot='image'
       class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
-      style=`background-image: url(${buscaM.imgPrev}.webp)`
+      style=`background-image: url(${moviRent.imgPrev}.webp)`
     >
     </div>
-    <p slot='content' class='max-w-xl'>
-      {bingo.description}
-    </p>
   </BentoItem>
 
   <BentoItem
@@ -55,24 +52,21 @@ const [bingo, buscaM, myPlato, ecomm] = projects
       style=`background-image: url(${ecomm.imgPrev}.webp)`
     >
     </div>
-    <p slot='content' class='max-w-xl'>
-      {ecomm.description}
-    </p>
   </BentoItem>
 
   <BentoItem
     class='col-span-10 md:col-span-4 transition-scale duration-1000 ease-in-out'
-    title={myPlato.name}
-    description={myPlato.description}
-    tech={myPlato.highlights}
-    linkDemo={myPlato.url}
+    title={bingo.name}
+    description={bingo.description}
+    tech={bingo.highlights}
+    linkDemo={bingo.url}
   >
     <!-- Group para que reconozca el hover de un item a su contenedor (Article del Bento) -->
     <div
       slot='image'
       class='absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110
     transition-scale duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blend-luminosity -z-10'
-      style=`background-image: url(${myPlato.imgPrev}.webp)`
+      style=`background-image: url(${bingo.imgPrev}.webp)`
     >
     </div>
   </BentoItem>

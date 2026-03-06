@@ -95,7 +95,18 @@
     {
       "name": "<My Stack />",
       "level": "Favorites",
-      "keywords": ["Html5", "Css3", "JavaScript", "TypeScript", "React", "Tailwind", "NodeJs", "MySQL", "Python"]
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "NodeJs",
+        "NestJs",
+        "React",
+        "NextJs",
+        "Css3",
+        "Tailwind",
+        "MySQL",
+        "Python"
+      ]
     }
   ],
   "languages": [
@@ -144,6 +155,13 @@
       "highlights": ["TypeScript", "React", "Tailwind Css"],
       "imgPrev": "ecommerce",
       "url": "https://github.com/Jabuitroon/e-commerce.git"
+    },
+    {
+      "name": "MoviRent layout",
+      "description": "RESTful de películas, lista de deseos y CRUD admin functions",
+      "highlights": ["TypeScript", "Nest Js", "Next Js", "PostgreSql"],
+      "imgPrev": "movieRent",
+      "url": "https://renta-pelis.vercel.app/"
     }
   ]
 }
