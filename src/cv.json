@@ -133,35 +133,38 @@
       "description": "Versión tabla única",
       "highlights": ["React", "TailwindCss"],
       "imgPrev": "bingoGamePrev",
-      "url": "https://jabuitroon.github.io/Bingo_Game/"
+      "demo": "https://jabuitroon.github.io/Bingo_Game/"
     },
     {
       "name": "Busca Minas",
       "description": "Un clásico de Windows",
       "highlights": ["React", "TailwindCss"],
       "imgPrev": "buscaMinas",
-      "url": "https://jabuitroon.github.io/Buscaminas/"
+      "repo": "https://github.com/Jabuitroon/Buscaminas/",
+      "demo": "https://jabuitroon.github.io/Buscaminas/"
     },
     {
       "name": "Mi Plato es el mejor",
       "description": "Web estática para promocionar un restaurante",
       "highlights": ["HTML5", "CSS3"],
       "imgPrev": "myP",
-      "url": "https://jabuitroon.github.io/Mi-plato_es_el_mejor/"
+      "repo": "https://github.com/Jabuitroon/Mi-plato_es_el_mejor/",
+      "demo": "https://jabuitroon.github.io/Mi-plato_es_el_mejor/"
     },
     {
       "name": "E-commerce layout",
       "description": "Una tienda virtual, carrito de compras y funcionalidades de administrador",
       "highlights": ["TypeScript", "React", "Tailwind Css"],
       "imgPrev": "ecommerce",
-      "url": "https://github.com/Jabuitroon/e-commerce.git"
+      "repo": "https://github.com/Jabuitroon/e-commerce.git"
     },
     {
       "name": "MoviRent layout",
       "description": "RESTful de películas, lista de deseos y CRUD admin functions",
       "highlights": ["TypeScript", "Nest Js", "Next Js", "PostgreSql"],
       "imgPrev": "movieRent",
-      "url": "https://renta-pelis.vercel.app/"
+      "repo": "https://github.com/Jabuitroon/Renta_Pelis",
+      "demo": "https://renta-pelis.vercel.app/"
     }
   ]
 }

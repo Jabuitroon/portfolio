@@ -4,16 +4,35 @@ interface Props {
   tech: string[]
   description?: string
   class?: string
-  linkDemo: string
+  linkRepo?: string
+  linkDemo?: string
 }
 
-const { title, description, tech, linkDemo } = Astro.props
+const { title, description, tech, linkRepo, linkDemo } = Astro.props
 ---
 
 <article
   class={`${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border hover:border-secundary border-black/10 shadow-inner shadow-white/10 group overflow-hidden`}
 >
   <slot name='image' />
+  <div class='fixed z-30 flex py-2 justify-end items-center w-full px-1 gap-1'>
+    {
+      linkRepo && (
+        <a href=`${linkRepo}`
+      target='_blank'
+      class='rounded-lg text-white text-sm px-3 py-1 bg-gray-800'>Repo</a>
+      )
+    }
+    {
+      linkDemo && (
+        <a href=`${linkDemo}`
+      target='_blank'
+      class='rounded-lg text-white text-sm px-3 py-1 bg-secundary'>Demo</a>
+      )
+    }
+    
+  </div>
+
   <div
     class='relative select-none flex flex-col gap-1 p-6 text-lg z-20 h-full justify-end transition-all group-hover:-translate-y-12'
   >
@@ -38,11 +57,5 @@ const { title, description, tech, linkDemo } = Astro.props
         )
       })
     }
-    <a
-      href=`${linkDemo}`
-      target='_blank'
-      class='group-hover:-translate-y-12 duration-300 rounded-lg text-white text-sm px-3 py-1 bg-secundary'
-      >Demo</a
-    >
   </div>
 </article>

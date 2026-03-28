@@ -27,8 +27,10 @@ const SOCIAL_ICONS: Record<string, any> = {
   MySQL,
   Python,
   NextJs,
-  NestJs
+  NestJs,
 }
+
+const currentYear = new Date().getFullYear()
 ---
 
 <footer class='bg-primary text-white w-full'>
@@ -53,7 +55,7 @@ const SOCIAL_ICONS: Record<string, any> = {
     <hr class='border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-[5px]' />
     <div class='sm:flex sm:items-center sm:justify-between'>
       <span class='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
-        2023. Popayán - Cauca - Colómbia
+        2023-{currentYear}. Popayán - Cauca - Colómbia
       </span>
     </div>
   </article>
